@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1243,1042" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1243,2240" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -108,7 +108,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="592,977" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="608,2175" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="datatable">
         <sap:WorkflowViewStateService.ViewState>
@@ -124,46 +124,131 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DataTable="[datatable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1:D51" SheetName="Clients" WorkbookPath=".local\NWU Tech Trends Data.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="530,769" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ReadRange AddHeaders="True" DataTable="[datatable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="546,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1:D51" SheetName="Clients" WorkbookPath=".local\NWU Tech Trends Data.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="546,1967" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,582" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1780" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Create - TelemetryPortal_MVC" sap:VirtualizedContainerService.HintSize="434,494" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="600a0814-138f-4433-8c42-5ca27995d6f7" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Create - TelemetryPortal_MVC" sap:VirtualizedContainerService.HintSize="450,1692" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="600a0814-138f-4433-8c42-5ca27995d6f7" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Client ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,254" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="600a0814-138f-4433-8c42-5ca27995d6f7" Text="[CurrentRow(&quot;ClientID&quot;).ToString]" Version="V4">
-                    <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="https://project3-webapp-42563690.azurewebsites.net/Clients/Create" CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvElementArea="318, 393, 420, 42" CvType="InputBox" DesignTimeRectangle="320, 395, 416, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='ClientId' tag='INPUT' type='text' class='form-control' aaname='Client ID' /&gt;" Guid="5ac15471-68f1-4506-b1c9-849979e25794" InformativeScreenshot="3413b2ba5d3035dd7428fc5cd9b864af.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create - TelemetryPortal_MVC' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                            <uix:Target CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvTextArea="319, 375, 62, 15" CvTextArgument="Client ID" CvType="Text" DesignTimeRectangle="320, 371, 60, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='control-label' aaname='Client ID' check:innerText='Client ID' /&gt;" Guid="11aa367e-dbbb-4a00-ae6e-afb755432363" SearchSteps="FuzzySelector, CV" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NTypeInto.Target>
-                    <uix:NTypeInto.VerifyOptions>
-                      <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                        <uix:VerifyExecutionTypeIntoOptions.Retry>
-                          <InArgument x:TypeArguments="x:Boolean" />
-                        </uix:VerifyExecutionTypeIntoOptions.Retry>
-                        <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                          <InArgument x:TypeArguments="x:Double" />
-                        </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                      </uix:VerifyExecutionTypeIntoOptions>
-                    </uix:NTypeInto.VerifyOptions>
-                  </uix:NTypeInto>
+                  <Sequence sap:VirtualizedContainerService.HintSize="416,1452" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Client ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="600a0814-138f-4433-8c42-5ca27995d6f7" Text="[CurrentRow(&quot;ClientID&quot;).ToString]" Version="V4">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://project3-webapp-42563690.azurewebsites.net/Clients/Create" CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvElementArea="318, 393, 420, 42" CvType="InputBox" DesignTimeRectangle="320, 395, 416, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='ClientId' tag='INPUT' type='text' class='form-control' aaname='Client ID' /&gt;" Guid="5ac15471-68f1-4506-b1c9-849979e25794" InformativeScreenshot="3413b2ba5d3035dd7428fc5cd9b864af.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create - TelemetryPortal_MVC' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvTextArea="319, 375, 62, 15" CvTextArgument="Client ID" CvType="Text" DesignTimeRectangle="320, 371, 60, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='control-label' aaname='Client ID' check:innerText='Client ID' /&gt;" Guid="11aa367e-dbbb-4a00-ae6e-afb755432363" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Client Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="600a0814-138f-4433-8c42-5ca27995d6f7" Text="[CurrentRow(&quot;ClientName&quot;).ToString]" Version="V4">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://project3-webapp-42563690.azurewebsites.net/Clients/Create" CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvElementArea="317, 455, 420, 41" CvType="InputBox" DesignTimeRectangle="320, 457, 416, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='ClientName' tag='INPUT' type='text' class='form-control' aaname='Client Name' /&gt;" Guid="e8605bc3-e307-4f8c-a6a6-ebafd8ddfd1a" InformativeScreenshot="e8a0829c23f62ae2c096b87478df498b.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create - TelemetryPortal_MVC' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvTextArea="319, 437, 88, 15" CvTextArgument="Client Name" CvType="Text" DesignTimeRectangle="320, 433, 87, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Client Name' tag='LABEL' type='' class='control-label' check:innerText='Client Name' /&gt;" Guid="b47e1f91-2da4-4775-bf64-d825d15efaa7" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Primary Contact Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="600a0814-138f-4433-8c42-5ca27995d6f7" Text="[CurrentRow(&quot;PrimaryContactEmail&quot;).ToString]" Version="V4">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://project3-webapp-42563690.azurewebsites.net/Clients/Create" CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvElementArea="317, 517, 420, 41" CvType="InputBox" DesignTimeRectangle="320, 519, 416, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='PrimaryContactEmail' tag='INPUT' type='email' class='form-control' aaname='Primary Contact Email' /&gt;" Guid="9f546cd2-5d6b-4569-95e1-645d46443aaa" InformativeScreenshot="bb902fe75ee38f07cad62651559bb7c6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create - TelemetryPortal_MVC' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvTextArea="319, 499, 156, 19" CvTextArgument="Primary Contact Email" CvType="Text" DesignTimeRectangle="320, 495, 155, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Primary Contact Email' tag='LABEL' type='' class='control-label' check:innerText='Primary Contact Email' /&gt;" Guid="fb8c3d2e-6e2b-45e5-9f41-394be0a19a43" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Date Onboarded'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="600a0814-138f-4433-8c42-5ca27995d6f7" Text="[CurrentRow(&quot;DateOnboarded&quot;).ToString]" Version="V4">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://project3-webapp-42563690.azurewebsites.net/Clients/Create" CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvTextArea="331, 592, 126, 19" CvTextArgument="yyyy/mm/dd --:--" CvType="Text" DesignTimeRectangle="320, 581, 416, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='DateOnboarded' tag='INPUT' type='datetime-local' class='form-control' aaname='Date Onboarded' /&gt;" Guid="a46b0885-3a53-482f-bf80-c1f0bad9c2e7" InformativeScreenshot="bc61cece79e4f94379acda1d129aea4d.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create - TelemetryPortal_MVC' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                          <uix:TargetAnchorable.Anchors>
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                              <uix:Target CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvTextArea="319, 561, 119, 15" CvTextArgument="Date Onboarded" CvType="Text" DesignTimeRectangle="320, 557, 118, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Date Onboarded' tag='LABEL' type='' class='control-label' check:innerText='Date Onboarded' /&gt;" Guid="72d2888c-5439-499c-b8bd-3867bab3a248" SearchSteps="FuzzySelector, CV" />
+                            </scg:List>
+                          </uix:TargetAnchorable.Anchors>
+                        </uix:TargetAnchorable>
+                      </uix:NTypeInto.Target>
+                      <uix:NTypeInto.VerifyOptions>
+                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionTypeIntoOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionTypeIntoOptions.Retry>
+                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                        </uix:VerifyExecutionTypeIntoOptions>
+                      </uix:NTypeInto.VerifyOptions>
+                    </uix:NTypeInto>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create'" sap:VirtualizedContainerService.HintSize="354,218" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="600a0814-138f-4433-8c42-5ca27995d6f7" Version="V4">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://project3-webapp-42563690.azurewebsites.net/Clients/Create" CVScreenId="a880f307-9c04-4e6f-988e-f23db8a07266" CvElementArea="319, 617, 74, 41" CvTextArea="332, 631, 48, 14" CvTextArgument="Create" CvType="Button" DesignTimeRectangle="320, 619, 72, 38" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' class='btn btn-primary' aaname='Create' check:text='Create' /&gt;" Guid="8cc945a3-6cdd-44e7-9ef8-775ecdc95c99" InformativeScreenshot="8db1adf649872a44933d273b807d8b10.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Create - TelemetryPortal_MVC' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                      <uix:NClick.VerifyOptions>
+                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions.Retry>
+                            <InArgument x:TypeArguments="x:Boolean" />
+                          </uix:VerifyExecutionOptions.Retry>
+                          <uix:VerifyExecutionOptions.Timeout>
+                            <InArgument x:TypeArguments="x:Double" />
+                          </uix:VerifyExecutionOptions.Timeout>
+                        </uix:VerifyExecutionOptions>
+                      </uix:NClick.VerifyOptions>
+                    </uix:NClick>
+                  </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
               <uix:NApplicationCard.TargetApp>
