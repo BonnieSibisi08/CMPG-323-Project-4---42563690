@@ -12,6 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "CurrentURL&Sequence_4",
         "datatable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
@@ -22,6 +23,7 @@
       "Path": "ProjectCreationSequence.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "index&Sequence_1",
         "datatable&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],

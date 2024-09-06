@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1243,1996" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1243,1992" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -113,7 +113,7 @@
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="608,1931" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="608,1927" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="datatable">
         <sap:WorkflowViewStateService.ViewState>
@@ -129,26 +129,29 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DataTable="[datatable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="546,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1:D51" SheetName="Clients" WorkbookPath=".local\NWU Tech Trends Data.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="546,1723" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ReadRange AddHeaders="True" DataTable="[datatable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="546,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1:D51" SheetName="Clients" WorkbookPath="NWU Tech Trends Data.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="546,1719" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1536" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1532" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Create - TelemetryPortal_MVC" sap:VirtualizedContainerService.HintSize="450,1448" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="600a0814-138f-4433-8c42-5ca27995d6f7" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Create - TelemetryPortal_MVC" sap:VirtualizedContainerService.HintSize="450,1444" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="600a0814-138f-4433-8c42-5ca27995d6f7" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="416,1208" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence sap:VirtualizedContainerService.HintSize="416,1204" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="CurrentURL" />
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,7 +161,7 @@
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/create-client" CVScreenId="f53fd27f-c30d-4f53-ba34-f4bc7f987b01" CvElementArea="298, 296, 1599, 41" CvType="InputBox" DesignTimeRectangle="294, 298, 1606, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='clientName' tag='INPUT' type='' class='form-control valid' aaname='Client Name' /&gt;" Guid="859ab05f-d00c-438c-bdc5-0d826a68bb01" InformativeScreenshot="4d2a1f7a3573a037cab0e12585939296.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='techtrendstelemetryportal.azurewebsites.net/create-client' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="f53fd27f-c30d-4f53-ba34-f4bc7f987b01" CvTextArea="293, 277, 89, 15" CvTextArgument="Client Name" CvType="Text" DesignTimeRectangle="294, 274, 88, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Client Name' check:innerText='Client Name' /&gt;" Guid="d65935ec-d887-478b-ad05-77772783e6e7" SearchSteps="FuzzySelector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -179,7 +182,7 @@
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/create-client" CVScreenId="f53fd27f-c30d-4f53-ba34-f4bc7f987b01" CvElementArea="300, 360, 1596, 38" CvType="InputBox" DesignTimeRectangle="294, 360, 1606, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='primaryContactEmail' tag='INPUT' type='' class='form-control valid' aaname='Primary Contact Email' /&gt;" Guid="ffee0aca-822b-45eb-b2f8-7d659f1840b8" InformativeScreenshot="d088a570ec1b9191c55889e4ef6e3d5f.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='techtrendstelemetryportal.azurewebsites.net/create-client' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="f53fd27f-c30d-4f53-ba34-f4bc7f987b01" CvTextArea="293, 339, 160, 18" CvTextArgument="Primary Contact Email" CvType="Text" DesignTimeRectangle="294, 336, 159, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Primary Contact Email' tag='LABEL' type='' class='' check:innerText='Primary Contact Email' /&gt;" Guid="e928431a-1eea-4f60-87c3-61db4938f538" SearchSteps="FuzzySelector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -200,7 +203,7 @@
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/create-client" CVScreenId="f53fd27f-c30d-4f53-ba34-f4bc7f987b01" CvTextArea="305, 432, 88, 18" CvTextArgument="yyyy/mm/dd" CvType="Text" DesignTimeRectangle="294, 422, 1606, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='dateOnboarded' tag='INPUT' type='date' class='form-control valid' aaname='Date Onboarded' /&gt;" Guid="f07a4eb1-2cf4-4986-ba61-f959f257a7eb" InformativeScreenshot="7196f3e35f1173f4231b013f6eaf0275.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='techtrendstelemetryportal.azurewebsites.net/create-client' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                               <uix:Target CVScreenId="f53fd27f-c30d-4f53-ba34-f4bc7f987b01" CvTextArea="293, 401, 120, 15" CvTextArgument="Date Onboarded" CvType="Text" DesignTimeRectangle="294, 398, 118, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Date Onboarded' tag='LABEL' type='' class='' check:innerText='Date Onboarded' /&gt;" Guid="9457539d-db48-436d-a8f1-056d0a179845" SearchSteps="FuzzySelector, CV" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
@@ -212,7 +215,7 @@
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/create-client" CVScreenId="f53fd27f-c30d-4f53-ba34-f4bc7f987b01" CvElementArea="292, 458, 78, 40" CvTextArea="306, 470, 50, 15" CvTextArgument="Create" CvType="Button" DesignTimeRectangle="294, 460, 74, 38" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Create' tag='BUTTON' type='submit' class='btn btn-primary' check:innerText='Create' /&gt;" Guid="00362e7b-8355-4837-9e80-8e9d81a0d201" InformativeScreenshot="2cccf3e386f835e996db87b27355f0f4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='techtrendstelemetryportal.azurewebsites.net/create-client' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,107" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://techtrendstelemetryportal.azurewebsites.net/create-client" Version="V4" />
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,105" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://techtrendstelemetryportal.azurewebsites.net/create-client" Version="V4" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
