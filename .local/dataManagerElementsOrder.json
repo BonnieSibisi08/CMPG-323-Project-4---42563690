@@ -29,6 +29,26 @@
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
+    },
+    {
+      "Path": "EditDeleteClientsSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "CurrentURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "LoginSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "datatable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
     }
   ]
 }
