@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LoginSequence" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1243,3789" sap2010:WorkflowViewState.IdRef="LoginSequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoginSequence" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1243,4363" sap2010:WorkflowViewState.IdRef="LoginSequence_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -107,7 +107,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoginSequence" sap:VirtualizedContainerService.HintSize="608,3724" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoginSequence" sap:VirtualizedContainerService.HintSize="706,4298" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="datatable">
         <sap:WorkflowViewStateService.ViewState>
@@ -123,34 +123,34 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange AddHeaders="True" DataTable="[datatable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="546,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1:B11" SheetName="Sheet1" WorkbookPath="random_emails_passwords.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="546,3516" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ReadRange AddHeaders="True" DataTable="[datatable]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="644,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" Range="A1:B11" SheetName="Sheet1" WorkbookPath="random_emails_passwords.xlsx" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[datatable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="644,4090" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,3329" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="610,3903" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Edge: Home" sap:VirtualizedContainerService.HintSize="450,3241" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V2">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Home" sap:VirtualizedContainerService.HintSize="548,3815" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V2">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,3001" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="514,3535" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Register'" sap:VirtualizedContainerService.HintSize="452,225" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/" CVScreenId="fda54745-c320-4926-9f95-25930e5baccc" CvTextArea="75, 360, 56, 16" CvTextArgument="Register" CvType="Text" DesignTimeRectangle="28, 343, 218, 48" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname=' Register                     ' class='nav-link' tag='A' type='' check:innerText='Register' /&gt;" Guid="92a025c4-3437-4356-8df9-ecb5b287f8fc" InformativeScreenshot="7770a41715c2677ff113341cbc42993f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/" CVScreenId="fda54745-c320-4926-9f95-25930e5baccc" CvTextArea="75, 360, 56, 16" CvTextArgument="Register" CvType="Text" DesignTimeRectangle="28, 343, 218, 48" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname=' Register                     ' class='nav-link' tag='A' type='' check:innerText='Register' /&gt;" Guid="92a025c4-3437-4356-8df9-ecb5b287f8fc" InformativeScreenshot="7770a41715c2677ff113341cbc42993f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Home' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Complete" />
                       </uix:NClick.Target>
                       <uix:NClick.VerifyOptions>
                         <uix:VerifyExecutionOptions DisplayName="Label 'Register'" Mode="Appears">
@@ -166,8 +166,19 @@
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_5" Url="https://techtrendstelemetryportal.azurewebsites.net/Account/Register" Version="V4" />
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="5" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Email&quot;).ToString]" Version="V4">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,304" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,105" sap2010:WorkflowViewState.IdRef="NGoToUrl_5" Url="https://techtrendstelemetryportal.azurewebsites.net/Account/Register" Version="V4" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="6" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Email&quot;).ToString]" Version="V4">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/Login" CVScreenId="4d5b08cc-035d-4535-8704-fef930344411" CvElementArea="291, 359, 524, 60" CvType="InputBox" DesignTimeRectangle="294, 360, 519, 58" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl name='Input.Email' tag='INPUT' type='' class='form-control valid' placeholder='name@example.com' aaname='' /&gt;" Guid="ee910ffb-2340-4364-b907-e5708038d2b5" InformativeScreenshot="7484eb9bbfa3225ceffc5b6d7d5985d6.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -188,7 +199,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Password&quot;).ToString]" Version="V4">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Password&quot;).ToString]" Version="V4">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/Login" CVScreenId="4d5b08cc-035d-4535-8704-fef930344411" CvElementArea="290, 432, 525, 62" CvType="InputBox" DesignTimeRectangle="294, 434, 519, 58" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control valid' placeholder='password' aaname='' /&gt;" Guid="61a173dc-414d-44af-b0a9-74e0ffc2f350" InformativeScreenshot="fa91a5fd7deb16fa9ac6f960f6bbb30b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -209,7 +220,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Confirm Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Password&quot;).ToString]" Version="V4">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Confirm Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Password&quot;).ToString]" Version="V4">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/Register" CVScreenId="9af5e072-6bdc-4caf-8234-ac46a3750dba" CvElementArea="291, 506, 524, 61" CvType="InputBox" DesignTimeRectangle="294, 508, 519, 58" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl name='Input.ConfirmPassword' tag='INPUT' type='password' class='form-control valid' placeholder='password' aaname='' /&gt;" Guid="3dbdd802-3d13-44b3-be94-8f0832d93fca" InformativeScreenshot="8f9b1d18eadc371a8769765ba08bc1bb.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Register' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -230,28 +241,26 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="1" DisplayName="Click 'Log in'" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/Register" CVScreenId="d5d9623f-9c3f-4432-bfda-ecee35682434" CvElementArea="291, 580, 523, 52" CvTextArea="516, 595, 77, 24" CvTextArgument="Register" CvType="Button" DesignTimeRectangle="294, 582, 519, 48" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='w-100 btn btn-lg btn-primary' aaname='Register' check:innerText='Register' /&gt;" Guid="a2ac646e-3669-445b-a3cc-f1c5bc60bbc2" InformativeScreenshot="4dce78d53e079173e1072099421a8e39.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Register' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                       </uix:NClick.Target>
-                      <uix:NClick.VerifyOptions>
-                        <uix:VerifyExecutionOptions DisplayName="Button 'Register'" Mode="Appears">
-                          <uix:VerifyExecutionOptions.Retry>
-                            <InArgument x:TypeArguments="x:Boolean" />
-                          </uix:VerifyExecutionOptions.Retry>
-                          <uix:VerifyExecutionOptions.Target>
-                            <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/Register" CVScreenId="d5d9623f-9c3f-4432-bfda-ecee35682434" CvElementArea="291, 580, 523, 52" CvTextArea="516, 595, 77, 24" CvTextArgument="Register" CvType="Button" DesignTimeRectangle="294, 582, 519, 48" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='w-100 btn btn-lg btn-primary' aaname='Register' check:innerText='Register' /&gt;" Guid="e33a923e-aeba-4827-a093-c39e38ee5fac" InformativeScreenshot="f990cc7fead0fb38510c32d0d80ad44d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Register' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                          </uix:VerifyExecutionOptions.Target>
-                          <uix:VerifyExecutionOptions.Timeout>
-                            <InArgument x:TypeArguments="x:Double" />
-                          </uix:VerifyExecutionOptions.Timeout>
-                        </uix:VerifyExecutionOptions>
-                      </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <uix:NGoToUrl DelayAfter="1" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[&quot;https://techtrendstelemetryportal.azurewebsites.net/Account/RegisterConfirmation?email=&quot; + CurrentRow(&quot;Email&quot;).ToString]" Version="V4" />
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DisplayName="Click 'Click here to confirm y…'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,304" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NGoToUrl DelayAfter="1" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,105" sap2010:WorkflowViewState.IdRef="NGoToUrl_3" Url="[&quot;https://techtrendstelemetryportal.azurewebsites.net/Account/RegisterConfirmation?email=&quot; + CurrentRow(&quot;Email&quot;).ToString]" Version="V4" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="4" DisplayName="Click 'Click here to confirm y…'" sap:VirtualizedContainerService.HintSize="452,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/RegisterConfirmation?email=john.smith%40example.com" CVScreenId="fe4da9a7-2912-4582-92be-dacc863ee8c7" CvTextArea="1381, 292, 245, 15" CvTextArgument="Click here to confirm your account" CvType="Text" DesignTimeRectangle="1383, 292, 241, 17" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Click here to confirm your account' tag='A' type='' class='' check:innerText='Click here to confirm your account' /&gt;" Guid="923a64ea-2fd1-4b8f-b05d-7ec663eeb74b" InformativeScreenshot="f9efdfd7f77c98e1afe0d4a1599f1ecc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Register confirmation' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/RegisterConfirmation?email=john.smith%40example.com" CVScreenId="fe4da9a7-2912-4582-92be-dacc863ee8c7" CvTextArea="1381, 292, 245, 15" CvTextArgument="Click here to confirm your account" CvType="Text" DesignTimeRectangle="1383, 292, 241, 17" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Click here to confirm your account' tag='A' type='' class='' check:innerText='Click here to confirm your account' /&gt;" Guid="923a64ea-2fd1-4b8f-b05d-7ec663eeb74b" InformativeScreenshot="f9efdfd7f77c98e1afe0d4a1599f1ecc.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Register confirmation' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                       </uix:NClick.Target>
                       <uix:NClick.VerifyOptions>
                         <uix:VerifyExecutionOptions DisplayName="Label 'Click here to confirm y…'" Mode="Appears">
@@ -267,7 +276,7 @@
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="354,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="452,225" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/ConfirmEmail?userId=4d9a26ee-9a32-49a6-8bdb-b45df5818f87&amp;code=Q2ZESjhFWjAzM0daK0NSS2dYTWRXQXZLY3NFSHRkcmFoN1NSWExQOHdRdVV6Z0RoWFUxdDZ3Wk0vWlhjSFQxa0dSaHg3YmVmSmNSc0poQnBYeHoyenRMWDRoS1ExWTBsOW5qbDU2MVdJZVZram9LbmVsYjg0WkduNGVVMkE5VHNQenkxblJkMW42emZHd05jcmdianMrczJuTCtwZVNvUTVHMlc5TmU3MDlFalVBRjllUVBZQzJBVk84UGEra2h4NFQvbnhpaTZtWTB5SnN4WE1abmhiRGNRelpaaUswbW4yQktXMTliM1llQUNGV3NNRG9sQmw4aVlkL1RZK0E4eTY2K0Ixdz09" CVScreenId="fa3b93c9-0c7d-4df6-8ff4-9b234754d245" CvTextArea="75, 416, 37, 16" CvTextArgument="Login" CvType="Text" DesignTimeRectangle="28, 399, 218, 48" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname=' Login                     ' class='nav-link' tag='A' type='' check:innerText='Login' /&gt;" Guid="cab70057-cbc1-4b89-846d-011c1d02e70e" InformativeScreenshot="b9df66fbcdc69a0176c103db6b2c7aac.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Confirm email' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                       </uix:NClick.Target>
@@ -285,8 +294,19 @@
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="https://techtrendstelemetryportal.azurewebsites.net/Account/Login" Version="V4" />
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="5" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Email&quot;).ToString]" Version="V4">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="452,304" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="354,105" sap2010:WorkflowViewState.IdRef="NGoToUrl_4" Url="https://techtrendstelemetryportal.azurewebsites.net/Account/Login" Version="V4" />
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBefore="6" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,286" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Email&quot;).ToString]" Version="V4">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/Login" CVScreenId="02ea4a2a-da80-48b1-95cc-af33d0fa8724" CvElementArea="291, 359, 524, 60" CvType="InputBox" DesignTimeRectangle="294, 360, 519, 58" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl name='Input.Email' tag='INPUT' type='' class='form-control valid' placeholder='name@example.com' aaname='' /&gt;" Guid="8de79902-4449-4788-a416-c2a09fc1566e" InformativeScreenshot="3eec17c6e3bf3174be156e4375fbc193.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -307,7 +327,7 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="354,286" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Password&quot;).ToString]" Version="V4">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="452,286" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Text="[CurrentRow(&quot;Password&quot;).ToString]" Version="V4">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/Login" CVScreenId="02ea4a2a-da80-48b1-95cc-af33d0fa8724" CvElementArea="290, 432, 525, 62" CvType="InputBox" DesignTimeRectangle="294, 434, 519, 58" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control valid' placeholder='password' aaname='' /&gt;" Guid="941d1d6a-20b2-4330-915d-01e5e26bf448" InformativeScreenshot="fa91a5fd7deb16fa9ac6f960f6bbb30b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -328,12 +348,12 @@
                         </uix:VerifyExecutionTypeIntoOptions>
                       </uix:NTypeInto.VerifyOptions>
                     </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="1" DelayBefore="6" DisplayName="Click 'Create'" sap:VirtualizedContainerService.HintSize="354,189" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="2" DelayBefore="6" DisplayName="Click 'Create'" sap:VirtualizedContainerService.HintSize="452,189" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b6820cfe-bb0e-46b1-a2e2-227e656c8ac7" Version="V4">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/Account/Login?ReturnUrl=%2FAccount%2FManage" CVScreenId="23c5ce11-ffaf-4759-94fa-90554a9083b6" CvElementArea="292, 554, 521, 51" CvTextArea="525, 570, 57, 23" CvTextArgument="Log in" CvType="Button" DesignTimeRectangle="294, 556, 519, 48" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='w-100 btn btn-lg btn-primary' aaname='Log in' check:innerText='Log in' /&gt;" Guid="7a01e005-5139-4463-9071-abd2305ad932" InformativeScreenshot="8f5f2a72d2702ce5c2920a42c9f8f3f3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Log in' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:Break sap:VirtualizedContainerService.HintSize="354,50" sap2010:WorkflowViewState.IdRef="Break_1" />
+                    <ui:Break sap:VirtualizedContainerService.HintSize="452,50" sap2010:WorkflowViewState.IdRef="Break_1" />
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
