@@ -12,8 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "CurrentURL&Sequence_4",
-        "datatable&Sequence_1"
+        "datatable&Sequence_5"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -45,6 +44,17 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
         "datatable&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ClientCreationSequence.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "datatable&Sequence_1",
+        "CurrentURL&Sequence_7"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
