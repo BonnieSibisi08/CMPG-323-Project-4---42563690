@@ -1,3 +1,4 @@
+# CMPG-323-Project-4---42563690 Testing Automation RPA UiPath  
 # Overview
 In this project, I focused on testing as a critical part of any solution development, highlighting how different testing perspectives—such as internal development team testing and business user acceptance testing (UAT)—play key roles. UAT is often performed manually and serves as a vital "go/no-go" decision point, where the solution is tested to ensure that the input entered into the system produces the expected output. If the solution fails this test, it requires amendment and retesting before it can move forward into production.
 
